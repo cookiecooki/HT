@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no"/>
+		<title>花印手机官网</title>
+		<link href="../style/hy/css/product.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			var sku12 = "31637C504023";
+			var basePath = "";
+		</script>
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/product.js"></script>
+	</head>
+	
+	<body>
+		<script type="text/javascript">
+			$.ajaxSetup(
+				{
+				  async:true,
+				  error: function(){
+				    $("#loading").hide();
+			      	$("#shade").hide();
+			      },
+				  beforeSend:function(XMLHttpRequest){
+					  $("#loading").show();
+					  $("#shade").show();
+			      },
+			      complete:function(XMLHttpRequest,textStatus){
+			      	$("#loading").hide();
+			      	$("#shade").hide();
+			      }
+				}
+			);
+		</script>
+		<div id="loading" style="top:50%;left:50%;position:fixed;margin-left:-18px;margin-top:-18px;z-index:9999;width:37px;height:37px;display:none;">
+			<img src='../style/other/images/img_v1.4/loading.gif' />
+		</div>
+		<div id="shade" class="bg-add" style="display: none;opacity: 0;"></div><div id="zhezhao" class="bg-add" style="display: none;"></div>
+		<!-- 只有一个确定按钮的提示框 -->
+		<div id="operationTip" class="tip2" style="display:none;">
+			<div class="tip-t">操作提示</div>
+		    <div class="tip-d">
+		        <p class="alert-word-b">
+			        <span></span>
+		        </p>
+		        <div class="alert-word-b"><p style="text-align: center;padding: 0px;width: 123px;" class="alert-confirm" onclick="$('.bg-add').hide();$('.tip2').hide();">确定</p></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//隐藏所有提示
+			function hideAlert(){
+				$('div.bg-add').hide();
+				$('div.add1, div.tip, div.tip2').hide();
+			}
+			//显示警告
+			function showAlert(msg){
+				hideAlert();
+				$('#zhezhao').show();
+				$('#operationTip').show();
+				$('#operationTip div p span').html(msg);
+			}
+		</script>
+		
+		<div id="globalBody">
+			<div class="nav ui-nav">
+				<div class="navCon">
+					<h1 class="brand3" style="cursor: pointer;" data-ajax="false" onclick="window.location.href='/';">花印</h1>
+					<!-- <h3 data-ajax="false" onclick="window.location.href='/toLZCollectList.do';" id="dirCollect" class="menues"><span class="menu">收藏</span></h3> -->
+					<h3 data-ajax="false" onclick="window.location.href='page/categoryList.html';" class="percen ui-menu"><span class="myCenter">菜单 </span></h3>
+					<h3 data-ajax="false" onclick="window.location.href='personalCenter.do';" id="personalCenter" class="collectes"><span class="collect">个人中心</span></h3>
+				</div>
+			</div>
+			<div class="shopCon">
+				<div class="shopWrap swiper-wrapper">
+					<div class="swiper-slide showPic"><div class="pinch-zoom"><img src="http://imgcdn.only.cn/product/veromoda/31637C504023/31637C504023130645eac4fe42ec8f5e3e230143351b.jpg"></div></div>
+					<div class="swiper-slide showPic"><div class="pinch-zoom"><img src="http://imgcdn.only.cn/product/veromoda/31637C504023/31637C504023e846dfe1c1f44d27b43c54f01b067861.jpg"></div></div>
+					<div class="swiper-slide showPic"><div class="pinch-zoom"><img src="http://imgcdn.only.cn/product/veromoda/31637C504023/31637C5040235e82f3e649154ae18be1934cbe177340.jpg"></div></div>
+					<div class="swiper-slide showPic"><div class="pinch-zoom"><img src="http://imgcdn.only.cn/product/veromoda/31637C504023/31637C504023bb51f3ff4f2e403592cf5d24c91bae6a.jpg"></div></div>
+					<a name="jump"></a>
+					<div class="swiper-slide">
+						<div class="shopInfoCon">
+							<div class="shopInfoList">
+								
+								<div class="salePro">
+								<h2>V领七分袖高腰中长款A摆连衣裙</h2>
+								<dl class="sort mb5"><dt>货号</dt><dd class="color01">31637C504023</dd></dl>
+								</div>
+								<div style="clear:both;"></div>
+								<dl class="sort">
+									<dt>价格</dt>
+									<dd class="money" style="font-size:14px;">
+									<span class="money-t">￥579.0</span><del class="discount-price" style="display: none;">￥579.0</del><span id="discount" style="display: none;" class="money-discount">1</span>
+									</dd>
+								</dl>
+								<dl class="sort"><dt class="stronger">产品信息</dt><dd class="stronger">面料：棉58.7% 锦纶36.9% 氨纶4.4% 里料：聚酯纤维95.7% 氨纶4.3%</dd></dl>
+							</div>
+							<div class="cListTitle">选择颜色</div>
+							<ul class="cList ui-cList" id="checkcolor">
+								<li  onclick="selectColor(this);" name="31637C504111">
+									<input type="hidden" name="cnum" value="111">
+									<input type="hidden" name="ctext" value="浅粉 ">
+									<div>浅粉 </div>
+									<span style="display:none" class="xuan-r"></span>
+								</li>
+								<li class="currentOk" onclick="selectColor(this);" name="31637C504023">
+									<input type="hidden" name="cnum" value="023">
+									<input type="hidden" name="ctext" value="本白">
+									<div>本白</div>
+									<span style="display:none" class="xuan-r"></span>
+								</li>
+								<li  onclick="selectColor(this);" name="31637C504034">
+									<input type="hidden" name="cnum" value="034">
+									<input type="hidden" name="ctext" value="海军蓝">
+									<div>海军蓝</div>
+									<span style="display:none" class="xuan-r"></span>
+								</li>
+							</ul>
+							<div class="cListTitle">选择尺码</div>
+							<ul class="cList ui-cList ui-mlist" id="checksize"></ul>
+							<div class="cListTitle">选择数量</div>
+							<div class="shopNumCon">
+								<div class="shopNum">
+									<a class="minus ui-minus ui-link" href="javascript:void(0);" onclick="subCount();">-</a>
+									<i id="buycount" class="ui-shopNums">1</i>
+									<a class="add ui-add ui-link" href="javascript:void(0);" onclick="addCount();">加</a>
+								</div>
+								<div class="shopNumTips"></div>
+							</div>
+							<p class="p_btn_ren">
+								<a class="addCollect" id="addCollectA" href="javascript:void(0);" onclick="shoppingCart();">加入购物清单</a>
+								<a class="buyCollect" id="toPayA" href="javascript:void(0);" onclick="toBuy();">立即购买 </a>
+							</p>
+							<a class="freeSpecial" href="javascript:void(0);" onclick="loginCheck('freeSpecial');">获取免费邮寄特权</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pagination">
+				<span class="swiper-pagination-switch swiper-active-switch" name="icon"></span>
+				<span class="swiper-pagination-switch" name="icon"></span>
+				<span class="swiper-pagination-switch" name="icon"></span>
+				<span class="swiper-pagination-switch" name="icon"></span>
+				<span class="swiper-gou"><a href="#jump" class="ui-link"><img src="../style/hy/images/gou.png"></a></span>
+			</div>
+			
+			<div class="settlement" style="display:none;">
+				<div class="settlement-tit">结算</div>
+				<div class="settlement-main">
+					<p class="word-m" style="font-size: 13px;"><span style="display:inline-block">登录即可享受订单信息查询及累计积分权益。</span><span>如果您选择继续不登录购买，可能无法享受完善的售后服务，也不能享受相应的会员权益。</span></p>
+					<p class="ordersBtn2">
+			    		<a class="btn01" onclick="buy(true);">继续结算</a>
+			    		<a href="javascript:void(0)" class="btn03" onclick="toLogin();" style="background-color: black;">登录</a>
+					</p>
+				</div>
+			</div>
+			<div id="freeSpecialDiv" class="tip" style="display:none;top: 62%;margin-top: -224px; padding-bottom:6px;">
+			    <p class="tip-t">获取免费邮寄特权</p>
+			    <div class="tip-d">
+			        <p class="p-t-o" style="position: absolute;top: 40px;left: 14%;">1、请选择一位店员成为您的专属顾问</p>
+			        <img class="ic-e" id="freeSpecialImg"/>
+			        <p class="p-t-o" style="height: 20px;line-height: 20px;">2、给店员扫描，您将获得以下服务：</p>
+			        <p class="p-t-y">
+			            <span><b class="red-s">[包邮]</b>收藏的商品可享有包邮服务</span>
+			            <span><b class="red-s">[专属]</b>将最适合您的商品推荐给您</span>
+			            <span><b class="red-s">[优惠]</b>将最新优惠第一时间与您同步</span>
+			        </p>
+					<a class="know" onclick="freeSpecialHide();" style="margin: 12px auto;">我知道了</a>
+			    </div>
+			</div>
+			<a class="collocationBtn ui-collocationBtn" id="combination" onclick="showDp();" style="display:none;">搭配</a>
+			<div class="collocation hide ui-collocation">
+				<div class="collocationCon">
+					<div class="collocationTitle">搭配商品<a class="close ui-close" onclick="closeDp();">关闭</a></div>
+					<div class="collocationListCon">
+					<div style="width:300px;overflow:auto;height:155px;margin:0 auto;">
+			       	<ul class="collocationList" style="width: 0px;">
+			       	</ul>
+					</div>
+					</div>
+			   </div>
+			</div>
+		</div>
+		
+		<div class="reviewPicture">
+			<p class="th-word">
+				<img src="../style/hy/images/img_v1.4/black-cha.png" width="13" style='position: absolute;top: -2px;right: 0px;' onclick="showReviewPic(false);"/>
+			</p>
+			<img id="reviewimgurl" src="" width="100%" style="margin:0 auto;display:block;"/>
+			<p class="th-ptn">
+				<a class="buy" href="javascript:void(0);" onclick="reviewDetail();" >查看详情</a>
+				<input type="hidden" id="reviewSku"/>
+				<a class="btn01" href="javascript:void(0);" onclick="showReviewPic(false);">取消预览</a>
+		   </p>
+		</div>
+		
+		<div style="display: none;">
+			<input type="hidden" name="lsPic_31637C504034" value="http://imgcdn.only.cn/product/veromoda/31637C504034/31637C5040349a954145f693466b8ee6065c62a64059.jpg"/>
+			<input type="hidden" name="lsPic_31637C504111" value="http://imgcdn.only.cn/product/veromoda/31637C504111/31637C504111290e06db61f34f85ad8c0eb2effc4218.jpg"/>
+			<input type="hidden" name="lsPic_31637C504023" value="http://imgcdn.only.cn/product/veromoda/31637C504023/31637C5040235e82f3e649154ae18be1934cbe177340.jpg"/>
+		</div>
+		<!-- <script type="text/javascript" src="//hm.baidu.com/hm.js?279297732b8e67a97e782f28e5928860"></script> -->
+</html>

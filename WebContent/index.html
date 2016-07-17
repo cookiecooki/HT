@@ -1,0 +1,440 @@
+﻿<!DOCTYPE HTML>
+<link href="style/hy/css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style/hy/css/color.css">
+<link rel="apple-touch-icon-precomposed" href="style/hy/images/precomposed-touch.png">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$.ajaxSetup(
+		{
+		  async:true,
+		  error: function(){
+		    $("#loading").hide();
+	      	$("#shade").hide();
+	      },
+		  beforeSend:function(XMLHttpRequest){
+			  $("#loading").show();
+			  $("#shade").show();
+	      },
+	      complete:function(XMLHttpRequest,textStatus){
+	      	$("#loading").hide();
+	      	$("#shade").hide();
+	      }
+		}
+	);
+	
+	var basePath = '';
+	var brandPath = 'style/vm';
+</script>
+
+<link href="style/hy/css/logo.css" rel="stylesheet" type="text/css">
+<div id="loading" style="top:50%;left:50%;position:fixed;margin-left:-18px;margin-top:-18px;z-index:9999;width:37px;height:37px;display:none;">
+<img src='style/other/images/img_v1.4/loading.gif' />
+</div>
+<div id="shade" class="bg-add" style="display: none;opacity: 0;"></div>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>花印手机官网</title>
+		<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<script type="text/javascript" src="js/headroom.min.js"></script>
+		<script type="text/javascript" src="js/jQuery.headroom.min.js"></script>
+		<script type="text/javascript" src="js/idangerous.swiper-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/category.js"></script>
+		<script type="text/javascript" src="js/searchpname.js"></script>
+		<!-- <script type="text/javascript" src="../hm.baidu.com/hmd995.js?279297732b8e67a97e782f28e5928860"></script> -->
+		<link href="style/utils/css/main.css" rel="stylesheet" type="text/css">
+		<link href="style/hy/css/v1.4/head.css" rel="stylesheet" type="text/css">
+		<style>
+			.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html 
+			.ui-panel-page-container-a{background:#000;border:1px solid #000;text-shadow:0 0 0 #F3F3F3;height:30px;}
+			.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{text-shadow:0 0 0 #F3F3F3;}
+			.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{background-color:#fff;}
+			.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit
+			{background:#000 ;background-size:101px 35px;text-shadow:0 0 0 #F3F3F3;}
+			a{color:black}
+			.Atitle,#indexFooter{display:none;}
+		</style>
+	</head>
+	<body>
+		<div id="zhezhao" class="bg-add" style="display: none;"></div>
+		<div class="error" style="display:none;z-index:2001;">
+			<span class="remind">提示信息</span>
+			<span class="errMsg"></span>
+			<span class="yes" onclick="alertHide();">确认</span>
+		</div>
+		<div class="tanchu" id="padMag" style="display:none;z-index:2001;">
+			<span style="height:15%"><img src="style/hy/images/c.png" id="closeButton" onclick="alertHide();"/></span>
+			<span id="login" style="height:25%;padding-top:6%">登录管理</span>
+			<span id="already" style="height:15%;padding-bottom:4%">你的账号已经在PAD上登录</span>
+			<div class="outChoose" style="height:28%">
+				<span onclick="alertHide();" id="one">取消</span>
+				<span onclick="padLogout();">从PAD上退出</span>
+			</div>
+		</div>
+		
+		<div class="navWrap">
+			<div class="nav ui-nav" data-role="header">
+				<div class="navCon">
+					<h1 class="logo" style="cursor: pointer;" data-ajax="false" onclick="window.location.href=''">花印</h1>
+					<a style="display: none" data-ajax="false" href="toLZCollectList.html" id="dirCollect" class="menues"><span class="menu">收藏</span></a>
+					<a data-ajax="false" href="page/categoryList.html" class="percen ui-menu"><span class="myCenter">菜单 </span></a>
+					<a data-ajax="false" href="personalCenter.html" id="personalCenter" class="collectes"><span class="collect">个人中心</span></a>
+				</div>
+			</div>
+			<div class="padContent">
+				<div class="pad" id="padBar" style="display: none;" onclick="padMag();">正在pad上登录账号</div>
+			</div>
+		</div>
+		
+		<div id="shopListDiv" class="wrap indexCon">
+		
+			<div class="indexShowPic indexShowPic1">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/product.html?id=R20160527001">
+							<img src="style/hy/images/ding.png" data-src="img/product/recommend/R20160527001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>新款推荐</em>
+							</p>
+						</a>
+					</div>
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/product.html?id=R20160527002">
+							<img src="style/hy/images/ding.png" data-src="img/product/recommend/R20160527002.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>5月27日上新</em>
+							</p>
+						</a>
+					</div>
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/product.html?id=R20160527003">
+							<img src="style/hy/images/ding.png" data-src="img/product/recommend/R20160527003.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>5月24日上新</em>
+							</p>
+						</a>
+					</div>
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/product.html?id=R20160527004">
+							<img src="style/hy/images/ding.png" data-src="img/product/recommend/R20160527004.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>5月20日上新</em>
+							</p>
+						</a>
+					</div>
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/product.html?id=R20160527005">
+							<img src="style/hy/images/ding.png" data-src="img/product/recommend/R20160527005.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>5月17日上新</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<div class="pagination pagination1"></div>
+			</div>
+			
+			<div class="indexShowPic indexShowPic3">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopList.html?category=4132">
+							<img src="style/hy/images/ding.png" data-src="img/product/male/M20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>男装</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- <div class="pagination pagination3"></div> -->
+			</div>
+			
+			<div class="indexShowPic indexShowPic4">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopList.html?category=523">
+							<img src="style/hy/images/ding.png" data-src="img/product/female/F20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>女装</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- <div class="pagination pagination4"></div> -->
+			</div>
+			
+			<div class="indexShowPic indexShowPic5">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopList.html?category=444">
+							<img src="style/hy/images/ding.png" data-src="img/product/boy/B20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>男童装</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- <div class="pagination pagination5"></div> -->
+			</div>
+			
+			<div class="indexShowPic indexShowPic6">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopList.html?category=450">
+							<img src="style/hy/images/ding.png" data-src="img/product/girl/G20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>女童装</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- <div class="pagination pagination6"></div> -->
+			</div>
+			
+			<div class="indexShowPic indexShowPic7">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopList.html?category=512">
+							<img src="style/hy/images/ding.png" data-src="img/product/lovers/L20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>情侣装</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- <div class="pagination pagination7"></div> -->
+			</div>
+			
+			<div class="indexShowPic indexShowPic8">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopListb7be.html?category=2371">
+							<img src="style/hy/images/ding.png" data-src="img/product/parentchild/P20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>亲子装</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!-- <div class="pagination pagination8"></div> -->
+			</div>
+			
+			<div class="indexShowPic indexShowPic9">
+				<div class="indexShowPicWrap swiper-wrapper">
+					<div class="swiper-slide showPic add-height-r">
+						<a data-ajax="false" href="page/shopList.html?category=505">
+							<img src="style/hy/images/ding.png" data-src="img/product/diy/D20160528001.jpg" />
+							<p class="Atitle ui-pic-Atitle">
+								<em>DIY</em>
+							</p>
+						</a>
+					</div>
+				</div>
+				<div class="pagination pagination9"></div>
+			</div>
+					
+		</div>
+		
+		<div class="shopFooter" id="indexFooter" data-role="footer" style="background:#fff;">
+			<p style="margin:15px 10px 10px 10px;">联系我们：cookiecooki@126.com</p>
+			<p style="margin-bottom: 20px;">&copy;花印服饰</p>
+			<!-- <img src="style/hy/images/tele.png" width="193" height="23" style="margin-top:10px;"/>
+			<p style="width:150px; height:22px; margin:0 auto;">
+				<a data-ajax="false" onclick="window.location.href='http://www.veromoda.com.cn/?siteFlag=veromoda_mobile'" style="float:left; display:block; width:60px; height:13px;"><img src="style/hy/images/dileft.png" width="60" style="cursor:pointer"/></a>
+				<a style="float:right; display:block; width:80px; height:13px;" data-ajax="false" onclick="window.location.href='toReturnGoods.html'" ><img src="style/hy/images/diright.png" width="80"  style="cursor:pointer"/></a>
+			</p>
+			<p class="copyright">&copy;花印服饰</p> -->
+		</div>
+	</body>
+	
+	<script>
+		var basePath = '';
+		var brandPath = '/style/vm';
+		$(window).load(function(){
+			var pics=$("#shopListDiv").find(".indexShowPic").last();
+			pics.css('margin','0 auto');
+			var closecha = $("#closecha");
+			var footLoginRegDiv = $("#footLoginRegDiv");
+			closecha.bind("click",function(){
+				footLoginRegDiv.hide();
+				loginDivClosed = true;
+			});
+			/*轮播图片最外层盒子自适应高度*/
+			if($('.indexShowPic img')){
+				var addHeight = $('.add-height-r').height();
+				$('.indexShowPic').height(addHeight + 'px');
+				$('.indexShowPic div.indexShowPicWrap').height(addHeight + 'px');
+				$('.indexShowPic img').height(addHeight+'px');
+			}
+			
+			//懒加载纵向图片
+			var oImgs=$('.indexShowPicWrap div:first-child img');
+			var moveImg=function(){
+				  for(var i=0; i<oImgs.length; i++){
+			    	;(function(i){
+			    		if(!($(window).height()<$(oImgs[i]).offset().top && $(window).scrollTop()+$(window).height()<$(oImgs[i]).offset().top || $(window).scrollTop()>$(oImgs[i]).offset().top+$(oImgs[i]).outerHeight())){
+				         	$(oImgs[i]).attr('src',$(oImgs[i]).attr('data-src'));
+				         	oImgs[i].onerror=function(){
+				         		$(oImgs[i]).attr('src','style/hy/images/default.png');
+				         		$(oImgs[i]).attr('data-src','style/hy/images/default.png');
+				         	};
+					        $(oImgs[i]).load(function(){
+							    if($(oImgs[i]).attr('src')!='style/hy/images/default.png'){
+							    	$(oImgs[i]).siblings().fadeIn(800);
+							    }
+							});
+						 }
+			    	})(i);
+			    };
+			};
+			moveImg();
+			$(window).scroll(function(){
+			  moveImg();
+			});
+			//设置.5s后显示手机号
+			setTimeout(function(){
+				$('#indexFooter').show();
+			},500);
+			padLoginCheck();
+		});
+		
+		//显示提示
+		function alertShow(info){
+			$(".errMsg").text(info);
+			$("#zhezhao").show();
+			$(".error").show();
+		}
+		//隐藏提示
+		function alertHide(){
+			$("#zhezhao").hide();
+			$(".error").hide();
+			$("#padMag").hide();
+		}
+		//重新设置首页轮播图的尺寸，因为轮播图被隐藏后页面发生变化会导致轮播图再次显示时发生错乱
+		function swipersResize(){
+			if(swiperArray && swiperArray.length > 0){
+				for(var i=0; i< swiperArray.length; i++){
+			    	var swiper = swiperArray[i];
+			    	swiper.resizeFix();
+			    }
+			}
+		}
+		//横竖屏的切换
+		$(window).on("orientationchange",function(){
+		    if(window.orientation == 0 || window.orientation == 180)// Portrait
+		    {
+		    	var w = $(window).width();
+			    w = w*1.14 + 'px';
+			    $('.indexShowPic').height(w);
+				$('.indexShowPic div:first-child').height(w);
+				$('.nav').css({"position":"fixed","top":0});
+				$('.wrap').css({"padding-top":"48px"});
+		    }
+		    else// 横
+		    {
+				var w = $(window).width();
+				w = w*1.14 + 'px';
+				$('.indexShowPic').height(w);
+				$('.indexShowPic div:first-child').height(w);
+				$('.nav').css({"position":"fixed","top":"-10px"});
+				$('.wrap').css({"padding-top":"38px"});
+		    }
+		});
+		//判断导购扫码登录
+		function padLoginCheck(){
+			$.ajax({
+		        url: basePath + "guideloginverify.do",
+		        type: 'POST',
+		        dataType: 'text',
+		        async: true,
+		        success: function(data){
+		        	var json = eval("(" + data + ")");
+					var status = json.status;
+					if (status == "-1")
+					{
+						alertShow(json.messg);
+					}
+					else if(status == "1")
+					{
+						$(".wrap").css("padding-top", 72+"px");
+						$("#padBar").show();
+					}
+				},
+				beforeSend:function(XMLHttpRequest){},
+				complete:function(XMLHttpRequest,textStatus){}
+			});
+		}
+		var padLogoutBusy = false;
+		function padLogout(){
+			if(padLogoutBusy)
+			{
+				return;
+			}
+			padLogoutBusy = true;
+			$.ajax({
+		        url: basePath + "oauthloginout.do",
+		        type: 'POST',
+		        dataType: 'text',
+		        success: function(data){
+		        	var json = eval("(" + data + ")");
+					var status = json.status;
+					if (status == "-1")
+					{
+						alertHide();
+						alertShow(json.messg);
+					}
+					else if(status == "0"){
+						// 0退出成功，2秒消失
+						smHidePadInfo(json.messg);
+					}
+					padLogoutBusy = false;
+		        }
+			});
+		}
+		function padMag(){
+			$.ajax({
+		        url: basePath + "guideloginverify.do",
+		        type: 'POST',
+		        dataType: 'text',
+		        success: function(data){
+		        	var json = eval("(" + data + ")");
+		        	// status： -1异常错误，1已登录，2已退出
+					var status = json.status;
+					if (status == "-1")
+					{
+						alertShow(json.messg);
+					}
+					else
+					{
+						$("#already").text(json.messg);
+						$("#zhezhao").show();
+						$("#padMag").show();
+						if(status == "2"){
+							smHidePadInfo(json.messg);
+						}
+					}
+		        }
+			});
+		}
+		function smHidePadInfo(msg){
+			//设置2秒后层消失
+			$("#already").text(msg);
+			//$(".outChoose").hide();
+			//$("#closeButton").hide();
+			$("#padMag").show();
+			$("#padBar").attr("onclick", "");
+			$("#closeButton").attr("onclick", "");
+			setTimeout("$('#padMag').hide();$('#zhezhao').hide();",2000);
+			setTimeout("$('#padBar').hide();$('.wrap').css('padding-top','47px');",2000);
+		}
+	</script>
+
+</html>
+

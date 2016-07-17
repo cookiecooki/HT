@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>花印手机官网</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" /> 
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+		<meta content="telephone=no" name="format-detection" /> 
+		<link href="../style/hy/css/v1.4/head.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../style/hy/css/main.css" >
+		<link rel="stylesheet" href="../style/hy/css/color.css">
+		<link rel="apple-touch-icon-precomposed" href="../images/precomposed-touch.png">
+		<link href="../style/hy/css/logo.css" rel="stylesheet" type="text/css">
+		<link href="../style/hy/css/v1.4/head.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/headroom.min.js"></script>
+		<script type="text/javascript" src="../js/jQuery.headroom.min.js"></script>
+		<script type="text/javascript" src="../js/shop.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
+		<!-- <script type="text/javascript" src="../../hm.baidu.com/hmd995.js?279297732b8e67a97e782f28e5928860"></script> -->
+	</head>
+	
+	<body>
+		<div data-role="page" id="shopListPage">
+			<a id="shoplisttop"></a>
+			<style>
+				body{background:#fff;}
+				a:link {
+				  color: black; 
+				}
+				a:visited {
+				  color: black; 
+				}
+				a:hover {
+				  color: black; 
+				}
+				.money-j .yuan-jia,.money-j .xi-jia,.money-j .five-z{-webkit-text-size-adjust:none;font-size:11px;}
+				.five-z{
+					line-height:20px;
+				}
+				#jiazai{
+					display:none;
+				}
+			</style>
+			<input type="hidden" value="" id="totalPage"/>
+			<input type="hidden" value="" id="priceRange"/>
+			<input type="hidden" value="" id="pname"/>
+			<form action="../shop/shopfilter.jsp" method="post" id="shopfilterform" target="_self" >
+				<input type="hidden" value="" name="category" id="category"/>
+			</form>
+			<div id="showShopListCommonListDiv" data-role="header">
+				<div id="commonListDiv" class="navWrap">
+					<div class="nav ui-nav" data-role="header">
+						<div class="navCon">
+							<h1 class="logo" style="cursor: pointer;" data-ajax="false" onclick="window.location.href='../index.html'" ></h1>
+							<!-- <a href="javascript:void(0)" class="menues" id='menuMore'>更多</a> -->
+							<a data-ajax="false" href="categoryList.html" class="percen ui-menu"><span class="myCenter">菜单 </span></a>
+						    <a href="../index.html" data-ajax="false" class="collectes">返回</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="shopListDiv" class="wrap" data-role="content" style="padding-top:46px;">
+				<div class="shopCategory" id="shopCategory" style="display:none;">
+					<label></label>
+				    <span class="shopNumer" id="shopNumer"> </span>
+				</div>
+				<!-- <div class='addNewMenu addDisplay'>
+				    <span class="addshop addshopxx" onclick="clickShopFilter()">筛选</span>
+					<a data-ajax="false" onclick="window.location.href='../toLZCollectList.html';" class="ui-link"><span class="addshop addshopList">购物清单</span></a>
+					<a data-ajax="false" onclick="window.location.href='../personalCenter.html';" class="ui-link"><span class="addshop addshopmy">我的</span></a>
+				</div> -->
+			    <ul class="shopMenu ui-shopMenu" style="display: none;">
+			    	<li id="popularityAndProduct">人气</li>
+			        <li id="sortJ" >价格<i id="jj" class="icon"></i></li>
+			        <li id="sortX" >销量<i id="xx" class="icon"></i></li>
+			        <li id="popularityAndProduct2" class="popularityAndProductR">新品</li>
+			    </ul>
+			    <ul class="shopList" id="shopList">			    	
+			    </ul>
+			    <div id="noshopDiv"></div>
+			</div>		
+		</div>
+		
+		<div class="zai" id="jiazai">
+			<a href='javascript:void(0)'>加载中</a>
+		</div> 
+		<a id="dingtop" class="aTopLink" href="#shoplisttop" data-ajax="false">
+			<div class="list-top"><img src="../style/hy/images/top.png" width="15" height="22"/></div>
+		</a>
+	</body>
+</html>
+
+<script>
+	// var basePath = "/LZH5/";
+	// var brandPath = "/LZH5/style/other";
+	var basePath = "../";
+	var WEBAPP = "../style/hy";
+	var brandPath = "../style/hy";
+	$(function(){
+		$('#menuMore').click(function(){
+			$('.addNewMenu').toggleClass('addDisplay');
+		});
+	});
+	function tipsBgshow(obj) {
+	  	//obj.value="";
+	  	$(".tipsBg").css("display","block");
+	 	$("#ss").show();
+	  	$("#fh").hide();
+	}
+	
+	function tipsBghide(){
+		$(".tipsBg").css("display","none");
+		$("#fh").show();
+		$("#ss").hide();
+	}
+	
+	function clickShopFilter(){
+		$("#shopfilterform").submit();
+	}
+	
+	$(window).on("orientationchange",function(){
+	    if(window.orientation == 0 || window.orientation == 180){// Portrait
+	    	var w = $(window).width() /2;
+	    	w = w*1.6 + 'px';
+			$('.lazy').height(w);
+	    }
+	    else{ // 横
+		    var w = $(window).width() /2;
+			w = w*1.6 + 'px';
+			$('.lazy').height(w);
+	    }
+	}); 
+</script>

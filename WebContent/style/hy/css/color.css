@@ -1,0 +1,292 @@
+@charset
+utf-8;
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;
+}
+body {
+	font-size: 12px;
+	font-family: 'Microsoft Yahei', helvetica, arial;
+	background: #fbfbfb;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.commodityList .collcurs{border:1px solid #CE313A;}
+.listess .collcurs{border:1px solid #CE313A;}
+.commodityCon .cList li.cur,.shopCon .cList li.cur{border:1px solid #D70715;}
+.tips2{width:230px;height:140px;border:1px solid #CE313A;position:fixed;left:50%;top:50%;background:#fff;z-index:10000;margin:-66px 0 0 -116px;display:none;}
+.tips2 .title{height:33px;line-height:33px;font-size:18px;font-weight:700;color:#fff;text-align:center;background:#CE313A;}
+.inputCon .Validform_wrong{height:25px;line-height:25px;overflow:hidden;margin-top:1px;text-indent:5px;display:block;color:#CE313A;background: url(../images/img_v1.4/icon-tan.png) no-repeat left;background-size: 13px 13px;padding-left:10px;}
+.shopTips{position:fixed;z-index:100;height:60px;line-height:55px;background:#e6e6e6;color:#CE313A;text-align:center;font-weight:700;margin:15px 0 -10px 0px; bottom:0px; left:0px;width:100%;}
+.shopTipess{position:relative;z-index:0;height:60px;line-height:60px;background:#e6e6e6;color:#CE313A;text-align:center;font-weight:700;margin:15px 0 6px 0px; bottom:0px; left:0px;width:100%;}
+.ordersList li .ordersDelTips{color:#CE313A;margin-top:5px;}
+.ordersStatusTitle p{color:#CE313A;float:right;}
+/*.shopMenu{box-sizing:border-box;border:1px solid #CE313A;height:24px;line-height:24px;overflow:hidden;border-radius:5px;margin:10px;}
+.shopMenu li.cur{color:#fff;background:#CE313A;}*/
+.shopCon .shopNumTips{margin-left:150px;color:#CE313A;height:30px;line-height:30px;}
+.tips{width:230px;height:140px;border:1px solid #CE313A;position:fixed;left:50%;top:50%;background:#fff;z-index:10000;margin:-66px 0 0 -116px;display:none;}
+.tips .title{height:33px;line-height:33px;font-size:18px;font-weight:700;color:#fff;text-align:center;background:#CE313A;}
+ul.ordersSummary .cf06,.shopCategory span i{color:#CE313A;}
+.ui-tiped{width:300px;height:231px;border:1px solid #CE313A;position:fixed;left:50%;top:50%;background:#fff;z-index:10000;margin:-66px 0 0 -151px;}
+.sucess{
+	width:304px; height:65px;border:1px solid #CE313A;position:fixed;left:50%;top:50%;background:#fff;z-index:1000;margin:-32px 0 0 -152px;
+}
+.pk-btn a{
+    display:block;width:97px; height:24px; line-height:24px; text-align:center; font-size:14px; color:#fff; background-color:#CE313A; border:1px solid #B56F63;border-radius:3px;
+}
+.pr-button1{ display:block;width:80px; height:28px; line-height:28px; text-align:center; font-size:14px; color:#fff; background-color:#CE313A; border:1px solid #B56F63;border-radius:3px; margin:10px auto 20px;}
+.pk-pic6but{
+    display:block;width:97px; height:24px; line-height:24px; text-align:center; font-size:14px; color:#fff; background-color:#CE313A; border:1px solid #B56F63;border-radius:3px;margin:20px auto;
+}
+.borcolor{ border:1px solid #CE313A;}
+/* 筛选中样式 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,td {
+	text-align: center;
+	vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: 400;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+ol,ul,li {
+	list-style: none;
+}
+
+input {
+	font-size: 100%;
+}
+
+ins,a {
+	text-decoration: none;
+}
+
+a:hover,a:active,a:visited {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+*:-moz-placeholder {
+	color: #000;
+}
+
+*:-ms-input-placeholder {
+	color: #000;
+}
+
+*::-webkit-input-placeholder {
+	color: #000;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	font: 0/0 Arial;
+	visibility: hidden;
+}
+
+em,i {
+	font-style: normal;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mt40 {
+	margin-top: 40px;
+}
+
+.mb10 {
+	margin-bottom: 17px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+
+.mb40 {
+	margin-bottom: 40px;
+}
+
+/*  zhongyao  */
+.tip-shai {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background: #fff;
+	height: 100%;
+}
+
+.tip-s-tit {
+	width: 100%;
+	height: 50px;
+	background: #eee;
+}
+
+.tip-s-tit p {
+	height: 30px;
+	margin-top: 10px;
+	line-height: 30px;
+	display: inline-block;
+	padding: 0 10px;
+	width: 93%
+}
+
+.tip-s-tit p span {
+	display: block;
+	float: left;
+}
+
+.tip-s-tit p .tit-s-p {
+	float: right;
+	padding-left: 10px;
+}
+
+.tip-s-tit p .tit-s-w {
+	float: right;
+	border-right: 1px solid #d3d3d3;
+	padding-right: 10px;
+}
+
+.tip-m-j {
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+}
+
+.tip-m-j p {
+	font-weight: bold;
+}
+
+.tip-m-j img {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+.tip-o {
+	margin: 0 10px;
+	border-bottom: 1px solid #000;
+}
+.irs-slider{
+	width: 16px;
+	height: 16px;
+	top: 19px;
+	background: #CE313A;
+	border-radius: 100px;
+}
+.irs-line{
+	top:24px;
+}
+.irs-bar{
+	height: 3px;
+	top: 26px;
+	background: #CE313A;
+}
+.irs-line-mid{
+	height:3px;
+	top:2px;
+}
+.irs-line-right,.irs-line-left{
+	height:3px;
+	top:2px;
+}
+.promptPrice{
+	width:100%;
+}
+.promptPrice span{
+	display:inline-block;
+	width:49.5px;
+}
+.promptPrice span.noLimit{
+	width:24px;
+}
+.irs-bar{
+	height: 3px;
+	top: 26px;
+	background: #CE313A;
+}
+.irs-slider{
+	width: 50px;
+	height:50px;
+	top: 6px;
+	background:#CE313A;
+	background: rgba(0,0,0,0); 
+	border-radius: 100px;
+	display:inline-block;
+	/* background:url(../images/aas.png) no-repeat; */
+	/* display:inline-block;
+	background:none; */
+}
+.from>span{
+	width:20px;
+	height:20px;
+	background:#CE313A;
+	display:inline-block;
+	border-radius:100px;
+	position:relative;
+	top:10px;
+	left:10px;
+}
+.to>span{
+	width:20px;
+	height:20px;
+	background:#CE313A;
+	display:inline-block;
+	border-radius:100px;
+	position:relative;
+	left:10px;
+	top:10px;
+}
+
+/*renf*/
+.add-pirce-text-btn{
+	float: left;
+	display: inline-block;
+	padding: 6px 5px;
+	background: #f06;
+	color: #fff;
+	height: 10px;
+	line-height: 10px;
+	margin-top:-2px;
+}
+.add-pirce{
+	padding:0 10px;
+	width:100%;
+	line-height:41px;
+	color:#ff0066;
+	box-sizing: border-box;
+}
+.notNeeded {
+	height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	margin-top: 1px;
+	text-indent: 15px;
+	display: block;
+	color: #CE313A;
+	background: url(../images/img_v1.4/icon-tan.png) no-repeat
+		left;
+	background-size: 13px 13px;
+	display: none;
+}

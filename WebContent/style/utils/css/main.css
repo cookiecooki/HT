@@ -1,0 +1,158 @@
+/*pad*/
+ *{
+	margin:0px;
+	padding:0px;
+}
+body{
+	text-align: center;
+}
+header{
+	width:100%;
+	height:48px;
+	line-height: 48px;
+	font-weight: bold;
+	border-bottom: 1px solid #cccccc;
+	color:#000000;
+	position:relative;
+	font-size: 17px;
+}
+header span{
+	position:absolute;
+	right: 10px;
+	font-size: 13px;
+}
+.content{
+	width:100%;
+	background-color:#fbfbfb;
+}
+.content img{
+	width:80%;
+	margin-top:15%;
+	margin-bottom: 15%;
+}
+.content span{
+	display: block;
+}
+.content button{
+	width:94%;
+	height:42px;
+	border: 1px solid black;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+#button1{
+	margin-top:15%;
+	background-color: #000000;
+	color: white;
+}
+#button2{
+	margin-top: 4%;
+	background-color: white;
+	color: black;
+} 
+.padContent{
+	font-family:"Microsoft YaHei";
+}
+.padContent img{
+	width:80%;
+	margin-top:15%;
+}
+.pad{
+	width:100%;
+	height:25px;
+	position:fixed;
+	top:47px;
+	text-align:center;
+	line-height:25px;
+	background-color:white;
+	font-size:12px;
+}
+.heimu{
+	position:fixed;
+	top:0;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index:2000;
+}
+.tanchu{
+	width:90%;
+	height:180px;
+	background:#f5f5f5;
+	z-index:10000;
+	position:fixed;
+	left:5%;
+	top:35%;
+	text-align:center;
+	overflow:hidden;
+	font-weight:bold;
+}
+.tanchu img{
+	float:right;
+	margin-right:5px;
+	margin-top:5px;
+	width:5%;
+}
+.tanchu span{
+	display:block;
+}
+#login{
+	font-size:17px;
+}
+#already{
+	font-size:14px;
+}
+.outChoose{
+	width:100%;
+	border-top:1px solid #cccccc;
+}
+.outChoose span{
+	width:50%;
+	height:100%;
+	display:inline-block;
+	box-sizing:border-box;
+	text-align:center;
+	line-height:48px;
+	font-size:13px;
+}
+#one{
+	float:left;
+	border-right:1px solid #cccccc;
+}
+#two{
+	float:two;
+}
+.error{
+	width:60%;
+	height:150px;
+	background:#f5f5f5;
+	z-index:10000;
+	position:fixed;
+	left:20%;
+	top:35%;
+	text-align:center;
+	overflow:hidden;
+}
+.error span{
+	display:block;
+}
+.remind{
+	width:100%;
+	height:40px;
+	background:black;
+	color:white;
+	line-height:40px;
+}
+.yes{
+	width:60%;
+	height:30px;
+	margin:auto;
+	line-height:30px;
+	background:black;
+	color:white;
+}
+.errMsg{
+	width:100%;
+	height:70px;
+	color:black;
+	line-height:70px;
+}
+/*pad*/

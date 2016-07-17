@@ -1,0 +1,9 @@
+.navCon h1.logo{
+	width:144px;
+	height:15px;
+	text-indent:-9999px;
+	background:url(../images/logo.png) no-repeat;
+	background-size:144px 15px;
+	display:block;
+	margin:15px auto 9px;
+}
